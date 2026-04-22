@@ -7,7 +7,7 @@ public class App {
     public static void runBubblesortAvz() {
         int[] array = new int[]{9, 2, 3, 0, 8, 5, 10, 50, 100};
         //Instanciar la clase
-        BubblesortAvz bSortAvz = new BubblesortAvz(array);
+        BubbleSortAvz bSortAvz = new BubbleSortAvz(array);
         bSortAvz.printArray();
         bSortAvz.sort(true);
         bSortAvz.printArray();
