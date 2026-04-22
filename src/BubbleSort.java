@@ -1,44 +1,51 @@
 public class BubbleSort {
- // Constructor   
-    public BubbleSort () {
-        System.out.println("se creo la clase en el constructor");
-     }
     
-     public void sortAscendente (int numeros []) {
-        for (int i = 0; i < numeros.length; i++){
-            for(int j = i+1; j< numeros.length; j++){
-                //comparaciopn
-                if(numeros[i]>numeros[j]){
-                    // si cumple -> intercambio
-                    int aux = numeros[i];
-                    numeros [i] = numeros [j];
-                    numeros [j] = aux;
-                }
-
-
-            }
-
-        }
-        
-
-        }
-        public void sortDescendet(int[]numeros){
+    public BubbleSort(){
+        System.out.println("Se creo la clase en el constructor");
     }
+
+    public void sortAscendente(int numeros[]){
+        for (int i = 0; i< numeros.length; i++){
+            for(int j = i+1; j < numeros.length; j++){
+                //Comparación
+                if(numeros[i]> numeros[j]){
+                    // Sí se cumple -> intercambio
+                    int aux = numeros[i];
+                    numeros[i] = numeros[j];
+                    numeros[j] = aux;
+                }
+            }
+        }
+    }
+    public void sortDescendente(int[] numeros){
+        for (int i = 0; i< numeros.length; i++){
+            for(int j = i+1; j < numeros.length; j++){
+                //Comparación
+                if(numeros[i] < numeros[j]){
+                    // Sí se cumple -> intercambio
+                    int aux = numeros[i];
+                    numeros[i] = numeros[j];
+                    numeros[j] = aux;
+                }
+            }
+        }
+    }
+
     public void printArreglo(int[] numeros) {
         for (int i : numeros) {
-          // ln salta la linea  
-            System.out.print(i + ",");
+            System.out.print(i + ", ");
         }
         System.out.println();
-    public void sort(int[]numeros, boolean sortAscendente){ 
-        if(sortAscendente){
-            sortAscendente(numeros)
-        }
-
     }
-    
-    }  
-
-
-        
+    //
+    //[asc: true] ordenara ascendentemente
+    //[asc] FALSE ordenara desendentemente
+    //
+    public void sort(int[] numeros, boolean asc){
+        if(asc){
+            sortAscendente(numeros);
+        }else{
+            sortDescendente(numeros);
+        }
+    }
 }
